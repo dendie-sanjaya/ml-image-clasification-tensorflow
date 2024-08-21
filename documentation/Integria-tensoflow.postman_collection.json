@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "b807d8a1-c99e-449f-9614-f96fc06d555d",
+		"name": "Integria-tensoflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Upload Foto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo[]",
+							"type": "file",
+							"src": "/C:/Users/Harun/Desktop/bunga.png"
+						},
+						{
+							"key": "photo[]",
+							"type": "file",
+							"src": "/C:/Users/Harun/Desktop/rumah.jpg"
+						},
+						{
+							"key": "photo[]",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "photo[]",
+							"type": "file",
+							"src": "/C:/Users/Harun/Desktop/flower-animated-gif-12.gif",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "HGC87624",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://103.152.118.179/integriadev/ghc_tensoflow/",
+					"protocol": "http",
+					"host": [
+						"103",
+						"152",
+						"118",
+						"179"
+					],
+					"path": [
+						"integriadev",
+						"ghc_tensoflow",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Machine Learning Analisa Predikasi Foto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.152.118.179:5000/analysis?key=HGC87624&url_foto=https://asset.kompas.com/crops/FyXNOOJGN1XMvLVF0fJIhamCIvY=/0x0:750x500/750x500/data/photo/2021/05/13/609d41bc692d8.jpg",
+					"protocol": "http",
+					"host": [
+						"103",
+						"152",
+						"118",
+						"179"
+					],
+					"port": "5000",
+					"path": [
+						"analysis"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "HGC87624"
+						},
+						{
+							"key": "url_foto",
+							"value": "https://asset.kompas.com/crops/FyXNOOJGN1XMvLVF0fJIhamCIvY=/0x0:750x500/750x500/data/photo/2021/05/13/609d41bc692d8.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Kontribusi Foto ke Machine Learning",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "key",
+							"value": "HGC87624",
+							"type": "text"
+						},
+						{
+							"key": "tag",
+							"value": "foto_tinja_sakit_a",
+							"type": "text"
+						},
+						{
+							"key": "url",
+							"value": "http://103.152.118.179/integriadev/ghc_tensoflow/storage/202111/20211127_103055_61a208dfa90aa.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://103.152.118.179:5001/contribute",
+					"protocol": "http",
+					"host": [
+						"103",
+						"152",
+						"118",
+						"179"
+					],
+					"port": "5001",
+					"path": [
+						"contribute"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
