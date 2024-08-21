@@ -1,13 +1,12 @@
-Mechine Learning Image Clasification using Tensorflow
+# Machine Learning Image Classification using Tensorflow
 
-# Introducting
+## Introducing
 
-Sebuah mechine learning untuk klasifikasi/mengkatagorikan foto, misalkan untuk mengetahui sebuah foto bunga 
-yg di cek termasuk jenis bungan apa (exp: rose, tulip, ect)  
+A machine learning for classifying/categorizing photos, for example to find out what type of flower a photo is being checked 
 
-Mechine Learning menggunakan libaray Google Tensorflow
+(expamle: rose, tulip, ect). Machine Learning using Google Tensorflow library
 
-# Dependecy Modul 
+## Module Dependencies
 - pip install requests
 - pip install numpy
 - pip install tensorflow
@@ -16,83 +15,72 @@ Mechine Learning menggunakan libaray Google Tensorflow
 - pip install flask
 - pip install matplotlib
 
-# Training Mechine Lenaring (Via Command Line) 
- python training.py
+## Machine Learning Training (Via Command Line)
 
- command ini untuk melakukan training algoritma mechine learning agar dapat mengenail pola image 
+<code>python training.py</code>
 
-![Foto-1](./documentation/1.png)
+This command is to train the machine learning algorithm so that it can recognize image patterns
 
-![Foto-2](./documentation/2.png)
+![Photo-1](./documentation/1.png)
 
-![Foto-3](./documentation/3.png)
+![Photo-2](./documentation/2.png)
 
+![Photo-3](./documentation/3.png)
 
-Menghasil modeling hasil training bernama clasification_flower.h5
+Produces a training result modeling named clasification_flower.h5
 
-![Foto-1](./documentation/4.png)
+![Photo-1](./documentation/4.png)
 
+## Check Probability Image Classification (Via Command Line)
 
-# Check Probaility Image Clasification (Via Command Line) 
- python prediction.py
+<code>python prediction.py</code>
 
- command ini untuk melakukan probabilitas sebuah image masuk kedalam sebuah image clasfication  
+this command is to do the probability of an image entering an image classification
 
-![Foto-1](./documentation/5.png)
+![Photo-1](./documentation/5.png)
 
+## Run API Server
 
+A way is provided for Probaility Image Classification via Rest API
 
+Choose one of the methods below
 
-# Run API Server 
+to enter the environment
 
-Di sediakan cara untuk Probaility Image Clasification melalui Rest API
+<code>python -m venv env</code>
 
-Pilih satu cara di bawah ini 
+to enter the environment on windows
 
-untuk masuk ke enviroment
-python -m venv env 
+<code> env\Scripts\activate or env/bin/activate </code>
 
-untuk masuk ke enviroment di windows 
+to enter the Linux environment
+<code> source env\Scripts\activate or env/bin/activate </code>
 
-env\Scripts\activate or env/bin/activate
+<code> Run application api </code>
 
-untuk masuk ke enviroment linux
-source env\Scripts\activate or env/bin/activate 
- 
+<code> python app.py </code>
 
-Run aplication api 
+to run a service in the background or become a daemon
+nohop python app.py
 
-python app.py
+![Foto-1](./documentation/6.png) 
 
-untuk menjalan service di background atau menjadi daemon
-nohop python app.py 
+## Test Image Classification Via API 
 
-![Foto-1](./documentation/6.png)
+Here is an example of checking Image Classification Probability via Rest API ![Foto-1](./documentation/7.png) 
 
-# Test Clasification Image Via API 
+## Document 
 
-Beriku ini contoh cek  Probaility Image Clasification melalui Rest API
+Installation Tenfosflow Installation in Python -> https://www.tensorflow.org/install/pip 
 
-![Foto-1](./documentation/7.png)
+Tensor Flow Image Classification Material -> https://www.tensorflow.org/tutorials/images/classification 
 
+Convert Online zip to tar.gz -> https://anyconv.com/zip-to-tgz-converter/ 
 
-# Document Instalation
+Pyhton Flask Microframework Installation - Creating an API Service https://blog.javan.co.id/restful-api-sederhana-cepat-flask-dbb8fe9718d8
 
-Instalasi Tenfosflow di Python
-   -> https://www.tensorflow.org/install/pip
+## Firewall Open Port Open Port 5000 
 
-Materi Clasfikasi Image Tensor Flow
-   -> https://www.tensorflow.org/tutorials/images/classification
-
-Convert Online zip to tar.gz 
-  -> https://anyconv.com/zip-to-tgz-converter/
-
-Instalasi Microframework Pyhton Flask - Membuat API Service
-  https://blog.javan.co.id/restful-api-sederhana-menggunakan-flask-dbb8fe9718d8 
-
-
-# Firewall Open Port 
-  
   Open Port 5000 for webserver python running default 
 
   sudo ufw allow from any to any port 5000 proto tcp
