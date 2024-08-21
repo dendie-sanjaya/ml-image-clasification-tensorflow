@@ -54,14 +54,16 @@ to enter the environment on windows
 <code> env\Scripts\activate or env/bin/activate </code>
 
 to enter the Linux environment
+
 <code> source env\Scripts\activate or env/bin/activate </code>
 
-<code> Run application api </code>
+Run application api
 
 <code> python app.py </code>
 
 to run a service in the background or become a daemon
-nohop python app.py
+
+<code>nohop python app.py</code>
 
 ![Foto-1](./documentation/6.png) 
 
@@ -84,3 +86,15 @@ Pyhton Flask Microframework Installation - Creating an API Service https://blog.
   Open Port 5000 for webserver python running default 
 
   sudo ufw allow from any to any port 5000 proto tcp
+
+
+## Contact
+
+If you have question, you can contact this email   
+Email: dendie.sanjaya@gmail.com
+
+## License
+
+This project is licensed under the Apache License.
+
+  
