@@ -18,9 +18,10 @@ from tensorflow.keras.models import Sequential
 
 #start step 1 - import data training dan load data extend tgz
 print("\n1. Load Data Training & Load Testing Data \n");
-dataset_url = "http://localhost/tensorflow/foto_tinja_sakit.tgz"
-data_dir = tf.keras.utils.get_file('foto_tinja_sakit', origin=dataset_url, untar=True)
+#dataset_url = "http://localhost/tensorflow/foto-bunga.tgz"
 #data_dir = tf.keras.utils.get_file('flower_photos', origin=dataset_url, untar=True)
+
+data_dir = "./foto-bunga"
 data_dir = pathlib.Path(data_dir)
 print("______Lokasi Data Training:",data_dir)
 image_count = len(list(data_dir.glob('*/*.jpg')))
@@ -109,9 +110,8 @@ history = model.fit(
 
 #step 5 save model hasil training
 MODEL_BASE_PATH = "model"
-PROJECT_NAME = "GCH"
-#SAVE_MODEL_NAME = "clasification_flower.h5"
-SAVE_MODEL_NAME = "clasification_tinja.h5"
+PROJECT_NAME = "flower"
+SAVE_MODEL_NAME = "clasification_flower.h5"
 save_model_path = os.path.join(MODEL_BASE_PATH, PROJECT_NAME, SAVE_MODEL_NAME)
 if os.path.exists(os.path.join(MODEL_BASE_PATH, PROJECT_NAME)) == False:
     os.makedirs(os.path.join(MODEL_BASE_PATH, PROJECT_NAME))

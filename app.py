@@ -62,14 +62,14 @@ def predictions(source_test):
 
 @app.route('/')
 def root():
-    return 'RESTful API Mechine Learning HGC'
+    return 'RESTful API Mechine Learning Image Clasification'
 
 @app.route('/analysis', methods=['GET'])
 def analysis():
     url_foto = request.args.get('url_foto');
     key = request.args.get('key');
 
-    if((len(url_foto) > 7) and (key == 'HGC87624')):
+    if((len(url_foto) > 7) and (key == 'pwd123')):
       pr = predictions(url_foto);
       probabilitas = pr[1]
       prediksi = pr[0] 
