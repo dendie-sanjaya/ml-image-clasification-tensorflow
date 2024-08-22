@@ -6,6 +6,19 @@ A machine learning for classifying/categorizing photos, for example to find out 
 
 (expamle: rose, tulip, ect). Machine Learning using Google Tensorflow library
 
+
+## Table of Contents
+1. [Introducing](#introducing)
+2. [Module Dependencies](#module-dependencies)
+3. [Machine Learning Training (Via Command Line)](#machine-learning-training-via-command-line)
+4. [Check Probability Image Classification (Via Command Line)](#check-probability-image-classification-via-command-line)
+5. [Run API Server](#run-api-server)
+6. [Test Image Classification Via API](#test-image-classification-via-api)
+7. [Document](#document)
+8. [Firewall Open Port](#firewall-open-port)
+9. [Contact](#contact)
+10. [License](#license)
+
 ## Module Dependencies
 - pip install requests
 - pip install numpy
